@@ -1,0 +1,125 @@
+Día,Mañana,Tarde,Noche
+Día 1
+Mañana (06:00 - 14:00) -> [Juan, María, Pedro, Lucía, Carlos, Ana]
+Tarde (14:00 - 22:00) -> [José, Laura, Luis, Carmen, Miguel, Isabel, Fernando]
+Noche (22:00 - 06:00) -> [Beatriz, Alberto]
+Día 2
+Mañana (06:00 - 14:00) -> [Elena, Sofía, Andrés, Raquel, Pablo, Juan]
+Tarde (14:00 - 22:00) -> [María, Pedro, Lucía, Carlos, Ana, José, Laura]
+Noche (22:00 - 06:00) -> [Luis, Carmen]
+Día 3
+Mañana (06:00 - 14:00) -> [Miguel, Isabel, Fernando, Beatriz, Alberto, Elena]
+Tarde (14:00 - 22:00) -> [Sofía, Andrés, Raquel, Pablo, Juan, María, Pedro]
+Noche (22:00 - 06:00) -> [Lucía, Carlos]
+Día 4
+Mañana (06:00 - 14:00) -> [Ana, José, Laura, Luis, Carmen, Miguel]
+Tarde (14:00 - 22:00) -> [Isabel, Fernando, Beatriz, Alberto, Elena, Sofía, Andrés]
+Noche (22:00 - 06:00) -> [Raquel, Pablo]
+Día 5
+Mañana (06:00 - 14:00) -> [Juan, María, Pedro, Lucía, Carlos, Ana]
+Tarde (14:00 - 22:00) -> [José, Laura, Luis, Carmen, Miguel, Isabel, Fernando]
+Noche (22:00 - 06:00) -> [Beatriz, Alberto]
+Día 6
+Mañana (06:00 - 14:00) -> [Elena, Sofía, Andrés, Raquel, Pablo, Juan]
+Tarde (14:00 - 22:00) -> [María, Pedro, Lucía, Carlos, Ana, José, Laura]
+Noche (22:00 - 06:00) -> [Luis, Carmen]
+Día 7
+Mañana (06:00 - 14:00) -> [Miguel, Isabel, Fernando, Beatriz, Alberto, Elena]
+Tarde (14:00 - 22:00) -> [Sofía, Andrés, Raquel, Pablo, Juan, María, Pedro]
+Noche (22:00 - 06:00) -> [Lucía, Carlos]
+Día 8
+Mañana (06:00 - 14:00) -> [Ana, José, Laura, Luis, Carmen, Miguel]
+Tarde (14:00 - 22:00) -> [Isabel, Fernando, Beatriz, Alberto, Elena, Sofía, Andrés]
+Noche (22:00 - 06:00) -> [Raquel, Pablo]
+Día 9
+Mañana (06:00 - 14:00) -> []
+Tarde (14:00 - 22:00) -> [Juan, María, Pedro, Lucía, Carlos, Ana, José]
+Noche (22:00 - 06:00) -> [Laura, Luis]
+Día 10
+Mañana (06:00 - 14:00) -> [Carmen, Miguel, Isabel, Fernando, Beatriz, Alberto]
+Tarde (14:00 - 22:00) -> [Elena, Sofía, Andrés, Raquel, Pablo, Juan, María]
+Noche (22:00 - 06:00) -> [Pedro, Lucía]
+Día 11
+Mañana (06:00 - 14:00) -> [Carlos, Ana, José, Laura, Luis, Carmen]
+Tarde (14:00 - 22:00) -> [Miguel, Isabel, Fernando, Beatriz, Alberto, Elena, Sofía]
+Noche (22:00 - 06:00) -> [Andrés, Raquel]
+Día 12
+Mañana (06:00 - 14:00) -> [Pablo, Juan, María, Pedro, Lucía, Carlos]
+Tarde (14:00 - 22:00) -> [Ana, José, Laura, Luis, Carmen, Miguel, Isabel]
+Noche (22:00 - 06:00) -> [Fernando, Beatriz]
+Día 13
+Mañana (06:00 - 14:00) -> [Alberto, Elena, Sofía, Andrés, Raquel, Pablo]
+Tarde (14:00 - 22:00) -> [Juan, María, Pedro, Lucía, Carlos, Ana, José]
+Noche (22:00 - 06:00) -> [Laura, Luis]
+Día 14
+Mañana (06:00 - 14:00) -> [Carmen, Miguel, Isabel, Fernando, Beatriz, Alberto]
+Tarde (14:00 - 22:00) -> [Elena, Sofía, Andrés, Raquel, Pablo, Juan, María]
+Noche (22:00 - 06:00) -> [Pedro, Lucía]
+Día 15
+Mañana (06:00 - 14:00) -> [Carlos, Ana, José, Laura, Luis, Carmen]
+Tarde (14:00 - 22:00) -> [Miguel, Isabel, Fernando, Beatriz, Alberto, Elena, Sofía]
+Noche (22:00 - 06:00) -> [Andrés, Raquel]
+Día 16
+Mañana (06:00 - 14:00) -> [Pablo, Juan, María, Pedro, Lucía, Carlos]
+Tarde (14:00 - 22:00) -> [Ana, José, Laura, Luis, Carmen, Miguel, Isabel]
+Noche (22:00 - 06:00) -> [Fernando, Beatriz]
+Día 17
+Mañana (06:00 - 14:00) -> [Alberto, Elena, Sofía, Andrés, Raquel, Pablo]
+Tarde (14:00 - 22:00) -> []
+Noche (22:00 - 06:00) -> [Juan, María]
+Día 18
+Mañana (06:00 - 14:00) -> [Pedro, Lucía, Carlos, Ana, José, Laura]
+Tarde (14:00 - 22:00) -> [Luis, Carmen, Miguel, Isabel, Fernando, Beatriz, Alberto]
+Noche (22:00 - 06:00) -> [Elena, Sofía]
+Día 19
+Mañana (06:00 - 14:00) -> [Andrés, Raquel, Pablo, Juan, María, Pedro]
+Tarde (14:00 - 22:00) -> [Lucía, Carlos, Ana, José, Laura, Luis, Carmen]
+Noche (22:00 - 06:00) -> [Miguel, Isabel]
+Día 20
+Mañana (06:00 - 14:00) -> [Fernando, Beatriz, Alberto, Elena, Sofía, Andrés]
+Tarde (14:00 - 22:00) -> [Raquel, Pablo, Juan, María, Pedro, Lucía, Carlos]
+Noche (22:00 - 06:00) -> [Ana, José]
+Día 21
+Mañana (06:00 - 14:00) -> [Laura, Luis, Carmen, Miguel, Isabel, Fernando]
+Tarde (14:00 - 22:00) -> [Beatriz, Alberto, Elena, Sofía, Andrés, Raquel, Pablo]
+Noche (22:00 - 06:00) -> [Juan, María]
+Día 22
+Mañana (06:00 - 14:00) -> [Pedro, Lucía, Carlos, Ana, José, Laura]
+Tarde (14:00 - 22:00) -> [Luis, Carmen, Miguel, Isabel, Fernando, Beatriz, Alberto]
+Noche (22:00 - 06:00) -> [Elena, Sofía]
+Día 23
+Mañana (06:00 - 14:00) -> [Andrés, Raquel, Pablo, Juan, María, Pedro]
+Tarde (14:00 - 22:00) -> [Lucía, Carlos, Ana, José, Laura, Luis, Carmen]
+Noche (22:00 - 06:00) -> [Miguel, Isabel]
+Día 24
+Mañana (06:00 - 14:00) -> [Fernando, Beatriz, Alberto, Elena, Sofía, Andrés]
+Tarde (14:00 - 22:00) -> [Raquel, Pablo, Juan, María, Pedro, Lucía, Carlos]
+Noche (22:00 - 06:00) -> [Ana, José]
+Día 25
+Mañana (06:00 - 14:00) -> [Laura, Luis, Carmen, Miguel, Isabel, Fernando]
+Tarde (14:00 - 22:00) -> [Beatriz, Alberto, Elena, Sofía, Andrés, Raquel, Pablo]
+Noche (22:00 - 06:00) -> []
+Día 26
+Mañana (06:00 - 14:00) -> [Juan, María, Pedro, Lucía, Carlos, Ana]
+Tarde (14:00 - 22:00) -> [José, Laura, Luis, Carmen, Miguel, Isabel, Fernando]
+Noche (22:00 - 06:00) -> [Beatriz, Alberto]
+Día 27
+Mañana (06:00 - 14:00) -> [Elena, Sofía, Andrés, Raquel, Pablo, Juan]
+Tarde (14:00 - 22:00) -> [María, Pedro, Lucía, Carlos, Ana, José, Laura]
+Noche (22:00 - 06:00) -> [Luis, Carmen]
+Día 28
+Mañana (06:00 - 14:00) -> [Miguel, Isabel, Fernando, Beatriz, Alberto, Elena]
+Tarde (14:00 - 22:00) -> [Sofía, Andrés, Raquel, Pablo, Juan, María, Pedro]
+Noche (22:00 - 06:00) -> [Lucía, Carlos]
+Día 29
+Mañana (06:00 - 14:00) -> [Ana, José, Laura, Luis, Carmen, Miguel]
+Tarde (14:00 - 22:00) -> [Isabel, Fernando, Beatriz, Alberto, Elena, Sofía, Andrés]
+Noche (22:00 - 06:00) -> [Raquel, Pablo]
+Día 30
+Mañana (06:00 - 14:00) -> [Juan, María, Pedro, Lucía, Carlos, Ana]
+Tarde (14:00 - 22:00) -> [José, Laura, Luis, Carmen, Miguel, Isabel, Fernando]
+Noche (22:00 - 06:00) -> [Beatriz, Alberto]
+Día 31
+Mañana (06:00 - 14:00) -> [Elena, Sofía, Andrés, Raquel, Pablo, Juan]
+Tarde (14:00 - 22:00) -> [María, Pedro, Lucía, Carlos, Ana, José, Laura]
+Noche (22:00 - 06:00) -> [Luis, Carmen]

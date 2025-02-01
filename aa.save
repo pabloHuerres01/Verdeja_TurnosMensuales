@@ -1,0 +1,36 @@
+# Horario de Trabajo - Turnos Mensuales
+
+A continuación se presenta el horario de trabajo para los empleados durante un mes de 31 días. Los turnos están divididos en tres franjas horarias: **Mañana (06:00 - 14:00)**, **Tarde (14:00 - 22:00)** y **Noche (22:00 - 06:00)**.
+
+---
+
+## Tabla de Turnos
+
+| Nombre   | Día 1 | Día 2 | Día 3 | Día 4 | Día 5 | Día 6 | Día 7 | Día 8 | Día 9 | Día 10 | Día 11 | Día 12 | Día 13 | Día 14 | Día 15 | Día 16 | Día 17 | Día 18 | Día 19 | Día 20 | Día 21 | Día 22 | Día 23 | Día 24 | Día 25 | Día 26 | Día 27 | Día 28 | Día 29 | Día 30 | Día 31 |
+|----------|-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Juan     | M     | M     | T     | T     | M     | M     | T     | T     | M     | M      | T      | T      | M      | M      | T      | T      | M      | M      | T      | T      | M      | M      | T      | T      | M      | M      | T      | T      | M      | M      | T      |
+| María    | M     | T     | T     | T     | M     | T     | T     | T     | M     | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      |
+| Pedro    | M     | T     | T     | T     | M     | T     | T     | T     | M     | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      |
+| Lucía    | M     | T     | T     | T     | M     | T     | T     | T     | M     | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      |
+| Carlos   | M     | T     | T     | T     | M     | T     | T     | T     | M     | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      |
+| Ana      | M     | T     | T     | T     | M     | T     | T     | T     | M     | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      | T      | M      | T      | T      |
+| José     | T     | T     | T     | T     | T     | T     | T     | T     | T     | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      |
+| Laura    | T     | T     | T     | T     | T     | T     | T     | T     | T     | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      | T      |
+| Luis     | T     | N     | N     | N     | T     | N     | N     | N     | T     | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      |
+| Carmen   | T     | N     | N     | N     | T     | N     | N     | N     | T     | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      | N      | T      | N      | N      |
+| Miguel   | T     | M     | M     | M     | T     | M     | M     | M     | T     | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      |
+| Isabel   | T     | M     | M     | M     | T     | M     | M     | M     | T     | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      |
+| Fernando | T     | M     | M     | M     | T     | M     | M     | M     | T     | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      | M      | T      | M      | M      |
+| Beatriz  | N     | M     | M     | M     | N     | M     | M     | M     | N     | M      | M      | M      | N      | M      | M      | M      | N      | M      | M      | M      | N      | M      | M      | M      | N      | M      | M      | M      | N      | M      | M      |
+| Alberto  | M     | M     | M     | M     | M     | M     | M     | M     | M     | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      | M      |
+
+---
+
+### Leyenda:
+- **M**: Turno de Mañana (06:00 - 14:00)
+- **T**: Turno de Tarde (14:00 - 22:00)
+- **N**: Turno de Noche (22:00 - 06:00)
+
+---
+
+Este documento puede ser utilizado para consultar los turnos asignados a cada empleado durante el mes. Para cualquier ajuste o consulta, contactar al departamento de Recursos Humanos.
