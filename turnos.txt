@@ -1,0 +1,21 @@
+Nombre	DIA1	DIA2	DIA3	DIA4	DIA5	DIA6	DIA7	DIA8	DIA9	DIA10	DIA11	DIA12	DIA13	DIA14	DIA15	DIA16	DIA17	DIA18	DIA19	DIA20	DIA21	DIA22	DIA23	DIA24	DIA25	DIA26	DIA27	DIA28	DIA29	DIA30	DIA31	
+Juan	M	M	T		N			T	T	T	M	T			N	T	T			M	T	N	T	T			T	N	M			
+María	M	T	T		N			T	T		T	N	M			T	T	T	M				N	T	M				T	M	M	
+Pedro	M	T	T				N	T			T			M	N				M	M	T	M	M		N		T	M	T	M		
+Lucía	M	T	N		M	M		T	N		T			M	M	M		T	M	M	T	M	M		T	N				M	M	
+Carlos	M	T	N		M		T	T	N		T	M				N	T	M			T	M	T			N		M	T			
+Ana	M	T		M	M	M	N			M	T	M	T	M			T	T	T	T			N	T				T	T	T	M	
+José	T	T		M	M	T		N		M	T			M	M	N	T			T	T	M	M		T	M	M		T	T	N	
+Laura	T	T		M			T	N				M	T	T	M			T	T	T	T	T		T	T	M	M		T	T	M	
+Luis	T	N		M	T	T			M	N			T	T	M	M		T	T	T	T			T	T	M	M		T	T	M	
+Carmen	T	N		M	T	T			M	N	T	T	T				T	N	T	T				T	T	M		N		T	T	
+Miguel	T		M	M			T	M	M			N	T	T	M			N	T	T				T	T	T	M		N	T	T	
+Isabel	T		M	T	T		T	M	M	M			T	T			N	T	T	T		T		N		T	M	T	M	T		
+Fernando	T		M	T			T	M	M			T	T	T	T	M			T	N		T	M			T	N	T	M		T	
+Beatriz	N		M	T			T	M	M	M			N	T	T	M	M			N		T	T	M		T	T		N		T	
+Alberto	N		M	T	T	M	M			T	N	T	M	T			N	T	M		M	T		N		T	T	T	M	M		
+Elena		M	M	T	T	T		M	T	T	N	T			T	T	M		N		M	T	T	M	M		N	T	M	M	T	
+Sofía		M	T	T	T	N			T	T	M		N		T	T	M		N		M	T			N	T	T	T			T	
+Andrés		M	T	T	T	N			T	T	M			N	T	T	M			M	N				M	T	T	M		N	T	
+Raquel		M	T	N		T		T	T	T	M	T			T	T	M			M	N		T	M	M				M	N		
+Pablo		M	T	N				T	T	T			M	N	T	T	T			M	M	N			M		T	T			N	

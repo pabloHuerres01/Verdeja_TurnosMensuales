@@ -1,9 +1,15 @@
 package Turnos;
 
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 import Empleados.Empleado;
 import Meses.Dia;
@@ -83,21 +89,24 @@ public class GestorTurnos {
         List<Dia> mes = new ArrayList<>();
         int[] diasTrabajados = new int[empleados.size()];
         int[] diasDescanso = new int[empleados.size()];
+        int[] ultimaNoche = new int[empleados.size()]; // Almacena el último día trabajado en turno noche
         int indiceEmpleado = 0;
 
-        StringBuilder csvBuilder = new StringBuilder();
-        csvBuilder.append("CONSULTOR");
+        // Inicializar el encabezado de la matriz
+        StringBuilder matriz = new StringBuilder();
+        matriz.append("Nombre\t");
         for (int i = 1; i <= turnosTotales; i++) {
-            csvBuilder.append("," + String.format("%02d-%02d", i, 2));
+            matriz.append("DIA" + i + "\t");
         }
-        csvBuilder.append("\n");
+        matriz.append("\n");
 
-        for (Empleado empleado : empleados) {
-            csvBuilder.append(empleado.getNombre());
-            for (int i = 1; i <= turnosTotales; i++) {
-                csvBuilder.append(",");
+        // Inicializar filas con los nombres de los empleados
+        String[][] turnosMatrix = new String[empleados.size()][turnosTotales + 1];
+        for (int i = 0; i < empleados.size(); i++) {
+            turnosMatrix[i][0] = empleados.get(i).getNombre();
+            for (int j = 1; j <= turnosTotales; j++) {
+                turnosMatrix[i][j] = ""; // Espacio vacío para los turnos
             }
-            csvBuilder.append("\n");
         }
 
         for (int i = 1; i <= turnosTotales; i++) {
@@ -115,6 +124,14 @@ public class GestorTurnos {
                     if (diasDescanso[indiceEmpleado] > 0) {
                         diasDescanso[indiceEmpleado]--;
                     } else {
+                        boolean puedeTrabajarNoche = turno.equals("Noche") ? (ultimaNoche[indiceEmpleado] == 0 || (i - ultimaNoche[indiceEmpleado] > 5)) : true;
+
+                        if (!puedeTrabajarNoche) {
+                            intentos++;
+                            indiceEmpleado = (indiceEmpleado + 1) % empleados.size();
+                            continue;
+                        }
+
                         if (diasTrabajados[indiceEmpleado] >= 6 || (diasTrabajados[indiceEmpleado] >= 3 && Math.random() > 0.7)) {
                             diasTrabajados[indiceEmpleado] = 0;
                             diasDescanso[indiceEmpleado] = 2;
@@ -123,18 +140,14 @@ public class GestorTurnos {
                             diasTrabajados[indiceEmpleado]++;
                             asignados++;
 
-                            int rowIndex = empleados.indexOf(empleado);
-                            int columnIndex = i; // Índice de columna para este día
-
-                            String[] rows = csvBuilder.toString().split("\n");
-                            String[] columns = rows[rowIndex + 1].split(",");
-
-                            if (columnIndex < columns.length) {
-                                String turnoInicial = turno.substring(0, 1); // M, T o N
-                                columns[columnIndex] = turnoInicial;
-                                rows[rowIndex + 1] = String.join(",", columns);
-                                csvBuilder = new StringBuilder(String.join("\n", rows));
+                            if (turno.equals("Noche")) {
+                                ultimaNoche[indiceEmpleado] = i;
                             }
+
+                            // Actualizar la matriz
+                            int rowIndex = empleados.indexOf(empleado);
+                            String turnoInicial = turno.substring(0, 1); // M, T o N
+                            turnosMatrix[rowIndex][i] = turnoInicial;
                         }
                     }
 
@@ -150,9 +163,24 @@ public class GestorTurnos {
             mes.add(dia);
         }
 
-        try (FileWriter writer = new FileWriter("turnos.csv")) {
-            writer.write(csvBuilder.toString());
-            System.out.println("Archivo CSV generado correctamente.");
+        // Exportar la matriz a un archivo de texto
+        try (FileWriter writer = new FileWriter("turnos.txt")) {
+            // Escribir encabezados
+            writer.write("Nombre\t");
+            for (int i = 1; i <= turnosTotales; i++) {
+                writer.write("DIA" + i + "\t");
+            }
+            writer.write("\n");
+
+            // Escribir filas con los datos
+            for (String[] row : turnosMatrix) {
+                for (String cell : row) {
+                    writer.write((cell == null ? "" : cell) + "\t");
+                }
+                writer.write("\n");
+            }
+
+            System.out.println("Archivo de texto generado correctamente.");
         } catch (IOException e) {
             e.printStackTrace();
         }
