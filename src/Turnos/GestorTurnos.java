@@ -55,56 +55,6 @@ public class GestorTurnos {
         return empleados;
     }
 
-    public static List<Dia> generarTurnos(List<Empleado> empleados, int turnosTotales) {
-        List<Dia> mes = new ArrayList<>();
-        int[] diasTrabajados = new int[empleados.size()]; // Controla los días trabajados de cada empleado
-        int[] diasDescanso = new int[empleados.size()];  // Controla los días de descanso de cada empleado
-        int indiceEmpleado = 0;
-
-        for (int i = 1; i <= turnosTotales; i++) {
-            System.out.println("Generando día " + i);
-            Dia dia = new Dia(i);
-
-            for (String turno : List.of("Mañana", "Tarde", "Noche")) {
-                int trabajadoresNecesarios = turno.equals("Mañana") ? 6 : (turno.equals("Tarde") ? 7 : 2);
-                int asignados = 0;
-                int intentos = 0; // Para evitar ciclos infinitos si no hay suficientes empleados disponibles
-
-                while (asignados < trabajadoresNecesarios && intentos < empleados.size() * 2) {
-                    Empleado empleado = empleados.get(indiceEmpleado);
-
-                    if (diasDescanso[indiceEmpleado] > 0) {
-                        // Reducir el contador de días de descanso si el empleado está descansando
-                        diasDescanso[indiceEmpleado]--;
-                    } else if (diasTrabajados[indiceEmpleado] < 6) {
-                        // Asignar al turno si el empleado no supera el límite de días trabajados consecutivos
-                        dia.asignarEmpleadoATurno(empleado, turno);
-                        diasTrabajados[indiceEmpleado]++;
-                        asignados++;
-                    } else {
-                        // Iniciar el descanso si el empleado ha trabajado 6 días consecutivos
-                        diasTrabajados[indiceEmpleado] = 0;
-                        diasDescanso[indiceEmpleado] = 2; // 2 días de descanso
-                    }
-
-                    // Avanzar al siguiente empleado en la lista
-                    indiceEmpleado = (indiceEmpleado + 1) % empleados.size();
-                    intentos++;
-                }
-
-                // Si no se asignaron suficientes empleados, emitir una advertencia
-                if (asignados < trabajadoresNecesarios) {
-                    System.out.println("Advertencia: No se pudieron asignar suficientes empleados para el turno " + turno + " en el día " + i);
-                }
-            }
-
-            mes.add(dia);
-        }
-
-        return mes;
-    }
-   
-
     public static void mostrarTurnos(List<Dia> mes) {
         for (Dia dia : mes) {
             System.out.println(dia);
@@ -121,5 +71,92 @@ public class GestorTurnos {
         } catch (IOException e) {
             System.out.println("Error al guardar CSV: " + e.getMessage());
         }
+    }
+    
+    /**
+     * Metodo base para generar los turnos 
+     * @param empleados
+     * @param turnosTotales
+     * @return
+     */
+    public static List<Dia> generarTurnos(List<Empleado> empleados, int turnosTotales) {
+        List<Dia> mes = new ArrayList<>();
+        int[] diasTrabajados = new int[empleados.size()];
+        int[] diasDescanso = new int[empleados.size()];
+        int indiceEmpleado = 0;
+
+        StringBuilder csvBuilder = new StringBuilder();
+        csvBuilder.append("CONSULTOR");
+        for (int i = 1; i <= turnosTotales; i++) {
+            csvBuilder.append("," + String.format("%02d-%02d", i, 2));
+        }
+        csvBuilder.append("\n");
+
+        for (Empleado empleado : empleados) {
+            csvBuilder.append(empleado.getNombre());
+            for (int i = 1; i <= turnosTotales; i++) {
+                csvBuilder.append(",");
+            }
+            csvBuilder.append("\n");
+        }
+
+        for (int i = 1; i <= turnosTotales; i++) {
+            System.out.println("Generando día " + i);
+            Dia dia = new Dia(i);
+
+            for (String turno : List.of("Mañana", "Tarde", "Noche")) {
+                int trabajadoresNecesarios = turno.equals("Mañana") ? 6 : (turno.equals("Tarde") ? 7 : 2);
+                int asignados = 0;
+                int intentos = 0;
+
+                while (asignados < trabajadoresNecesarios && intentos < empleados.size() * 2) {
+                    Empleado empleado = empleados.get(indiceEmpleado);
+
+                    if (diasDescanso[indiceEmpleado] > 0) {
+                        diasDescanso[indiceEmpleado]--;
+                    } else {
+                        if (diasTrabajados[indiceEmpleado] >= 6 || (diasTrabajados[indiceEmpleado] >= 3 && Math.random() > 0.7)) {
+                            diasTrabajados[indiceEmpleado] = 0;
+                            diasDescanso[indiceEmpleado] = 2;
+                        } else {
+                            dia.asignarEmpleadoATurno(empleado, turno);
+                            diasTrabajados[indiceEmpleado]++;
+                            asignados++;
+
+                            int rowIndex = empleados.indexOf(empleado);
+                            int columnIndex = i; // Índice de columna para este día
+
+                            String[] rows = csvBuilder.toString().split("\n");
+                            String[] columns = rows[rowIndex + 1].split(",");
+
+                            if (columnIndex < columns.length) {
+                                String turnoInicial = turno.substring(0, 1); // M, T o N
+                                columns[columnIndex] = turnoInicial;
+                                rows[rowIndex + 1] = String.join(",", columns);
+                                csvBuilder = new StringBuilder(String.join("\n", rows));
+                            }
+                        }
+                    }
+
+                    indiceEmpleado = (indiceEmpleado + 1) % empleados.size();
+                    intentos++;
+                }
+
+                if (asignados < trabajadoresNecesarios) {
+                    System.out.println("Advertencia: No se pudieron asignar suficientes empleados para el turno " + turno + " en el día " + i);
+                }
+            }
+
+            mes.add(dia);
+        }
+
+        try (FileWriter writer = new FileWriter("turnos.csv")) {
+            writer.write(csvBuilder.toString());
+            System.out.println("Archivo CSV generado correctamente.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return mes;
     }
 }
